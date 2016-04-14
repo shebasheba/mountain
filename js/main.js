@@ -1,70 +1,65 @@
-// Hello.
-//
-// This is The Scripts used for ___________ Theme
-//
-//
+$(document).ready(function(){
+	
 
-function main() {
+	/*  Foundation Init    */
+	$(document).foundation();
 
-(function () {
-   'use strict';
 
-   /*====================================
-    Page a Link Smooth Scrolling 
-    ======================================*/
-    $('a.page-scroll').click(function() {
-        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 900);
-            return false;
-          }
-        }
-      });
 
-    /*====================================
-    Menu Active Calling Scroll Spy
-    ======================================*/
-    $('body').scrollspy({ 
-      target: '.navmenu',
-      offset: 80,
+	/*  carousel Init    */
+	$('#carousel').carouFredSel({
+	 	width : '670',
+	 	pagination  : ".pagination",
+	 	responsive : true,
+	 	scroll :{
+	 		fx : 'fade'
+	 	},
+	 	items :{
+	 		visible : 1,
+	 		width : '670'
+	 	},
+		swipe: {
+			onMouse: true,
+			onTouch: true
+		}
     });
 
 
-    /* ==============================================
-	Testimonial Slider
-	=============================================== */ 
-
-	$(document).ready(function() {
-	 
-	  $("#testimonial").owlCarousel({
-	 
-	      navigation : false, // Show next and prev buttons
-	      slideSpeed : 300,
-	      paginationSpeed : 400,
-	      singleItem:true,
-	      autoHeight : true
-	 
-	      // "singleItem:true" is a shortcut for:
-	      // items : 1, 
-	      // itemsDesktop : false,
-	      // itemsDesktopSmall : false,
-	      // itemsTablet: false,
-	      // itemsMobile : false
-	 
-	  });
-	 
-	});
- 
-
- 
 
 
-}());
+
+	/*    Mean navigation menu scroll to    */
+    $('#mean_nav ul li a').click(function(e){
+    	e.preventDefault();
+    	scrollTo($(this).attr('href'), 900, 'easeInOutCubic');
+    });
 
 
-}
-main();
+
+
+
+
+    /*    Back to top button    */
+    var back_top = $('#back_top');
+
+    back_top.click(function(e){
+    	e.preventDefault();
+    	scrollTo(0, 900, 'easeInOutCubic');
+    	
+    });
+
+    function scrollTo(target, speed, ease){
+    	$(window).scrollTo(target, speed, {easing:ease});
+    }
+
+    $(window).on('scroll', function(){    
+	    if($(this).scrollTop()>749)
+	    {
+	    	back_top.stop().animate({opacity : 1}, 250);
+	    }else
+	    {
+	    	back_top.stop().animate({opacity : 0}, 250);	    
+	    }   
+    });
+
+});
