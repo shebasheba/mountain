@@ -144,6 +144,13 @@
 }
 
 
+.top-bar .toggle-topbar.menu-icon a span::after{
+	right: 0;
+}
+
+.top-bar .toggle-topbar.menu-icon a{
+	padding: 0 2rem 0 0.9375rem;
+}
 
 
 .top-bar,
