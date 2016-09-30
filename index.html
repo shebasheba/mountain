@@ -1,88 +1,291 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lamarck Biosciences - Coming soon...</title>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lamarck Biosciences</title>
+    <meta name="description" content="Spirit8 is a Digital agency one page template built based on bootstrap framework. This template is design by Robert Berki and coded by Jenn Pereira. It is simple, mobile responsive, perfect for portfolio and agency websites. Get this for free exclusively at ThemeForces.com">
+    <meta name="keywords" content="bootstrap theme, portfolio template, digital agency, onepage, mobile responsive, spirit8, free website, free theme, themeforces themes, themeforces wordpress themes, themeforces bootstrap theme">
+    <meta name="author" content="ThemeForces.com">
     
-    <!--    Stylesheet Files    -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/foundation.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-    <!--    Javascript files are placed before </body>    -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+    <!-- Slider
+    ================================================== -->
+    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
-  
   <body>
-    <!--  Start Hero Section  -->
-    <section class="hero">
-      <header>
-        <div class="row">
-          
-
-          <nav class="top-bar" data-topbar role="navigation">
-            
-            <!--    Start Logo    -->
-            <ul class="title-area">
-              <li class="name">
-                <a href="#" class="logo">
-                  <img src="img/logo.png">
-                </a>
-              </li>
-              </li>
-            </ul>  
-            <!--    End Logo    -->
-
-
-
-          </nav>
+    <!-- Navigation
+    ==========================================-->
+    <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/logo_white.png"></a>
         </div>
-      </header>
 
-      <!--    Start Hero Caption    -->
-      <section class="caption">
-      <section class="caption">
-        <div class="row" align="center">
-          <h1 class="mean_cap"><span style="color:black;background-color:white;font-style: italic;">"Habits form</span></h1>
-            <h2 class="sub_cap"><span style="color:black;background-color:white;font-style: italic;">a second nature."</span></h2>
-          <a href="#" class="btn_details"><span style="color:black;background-color:white;">― Jean-Baptiste Lamarck</span> <img src="img/btn_arrow.png" alt="" src="" class="arrow"></a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#tf-home" class="page-scroll">Home</a></li>
+            <li><a href="#tf-services" class="page-scroll">About</a></li>
+            <li><a href="#tf-metagenomics" class="page-scroll">Metagenomics</a></li>
+            <li><a href="#tf-metabolomics" class="page-scroll">Metabolomics</a></li>
+            <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Home Page
+    ==========================================-->
+    <div id="tf-home" class="text-center">
+        <div class="overlay">
+            <div class="content">
+                <h1>Omics analysis for <br><strong><span class="color">Food & Beverage</span></strong><br>industry</h1>
+                <p class="lead"><strong>___________</strong></p>
+                <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
+            </div>
         </div>
-      </section>
-      <!--    End Hero Caption    -->
-
-    </section>
-    <!--  End Hero Section  -->
+    </div>
 
 
+      
+    <!-- Services Section
+    ==========================================-->
+    <div id="tf-services" class="text-center">
+        <div class="container">
+            <div class="section-title center">
+                <h2>About <strong>Lamarck Biosciences</strong></h2>
+                <div class="line">
+                    <hr>
+                </div>
+                
+                <div class="clearfix"></div>
+<p>We created Lamarck Biosciences because we wanted to make the cutting edge research, that has been available so far for medical or scientific uses only, accessible for industrial applications. There is a huge gap between academic and industrial research in the area of bioinformatics and computational biology and we want to fill in this gap by offering clients from the food and beverage industry tailored, end-to-end solutions. Data obtained from such analyses will give producers insights that have not been attainable before, therefore providing them with necessary tools to make their technological and R&D processes as innovative as they can possibly be putting them at the forefront of new industrial revolution.</p>
+            </div>
+            <div class="space"></div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 service">
+                    <i class="fa fa-cutlery"></i>
+                    
+                    <p>We have a thorough knowledge about the Mediterranean food scene, which has allowed us to carve strong relationships with some key players.</p>
+                </div>
 
-    </section>
-    <!--  End Services Section  -->
+                <div class="col-md-3 col-sm-6 service">
+                    <i class="fa fa-leaf"></i>
+                    
+                    <p>We help high-end producers to understand and exploit natural variability arising in elements such as soils, plant microbiomes, fermentation or dry curing methods to develop and improve artisan goods.</p>
+                </div>
+
+                <div class="col-md-3 col-sm-6 service">
+                    <i class="fa fa-cogs "></i>
+                    
+                    <p>We collaborate with industrial clients to reduce defects in food production chains by implementing novel high-throughput metrics that allow for disciplined six-sigma quality management.</p>
+                </div>
+
+                <div class="col-md-3 col-sm-6 service">
+                    <i class="fa fa-line-chart"></i>
+                    
+                    <p>We work with large demanding retailers that are passionate about good stuff to anticipate global and seasonal market trends by using machine learning and large-scale natural language processing.</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+      
+      
+    <!-- Testimonials Section
+    ==========================================-->
+    <div id="tf-testimonials" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="section-title center">
+                    <h2><strong>Precision</strong> viticulture and enology</h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>      
+      
+      
+      
+    <!-- Metagenomics page
+    ==========================================-->
+    <div id="tf-metagenomics">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/02.png" class="img-responsive">
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <div class="section-title">
+                          
+                            <h2><strong>Metagenomics</strong></h2>
+                            <hr>
+                            <div class="clearfix"></div>
+                        </div>
+                        <p class="intro">Metagenomics is a powerful, high-throughput tool that makes it possible to analyse a range of diverse microsystems as deep as at a strain level. <br><br>DNA sequencing is the future of medicine, and we strongly believe that it will also revolutionise food and beverage industry. State of the art equipment and complex analytical methods allow us to decipher environments such as air, soil, liquids, plants or food with a precision so far unattainable with standard laboratory techniques. <br><br>Data obtained from such analysis in turn can be used to optimise and improve production processes as well as eliminate unnecessary waste due to spoilage organisms or pathogens involvement.<br><br> Quality and safety control have never been so cutting edge. Our tailored end-to-end solutions will allow producers to stay ahead of their competition.<br><br></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      
+    
+      
+      
+    <!-- Team Page
+    ==========================================-->
+    <div id="tf-team" class="text-center">
+        <div class="overlay">
+            <div class="container">
+                <div class="section-title center">
+                    <h2><strong>Customized</strong> probiotic dairy</h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+    </div>
+      
+      
+    <!-- Metabolomics Page
+    ==========================================-->
+    <div id="tf-metabolomics">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/07.png" class="img-responsive">
+                </div>
+                <div class="col-md-6">
+                    <div class="about-text">
+                        <div class="section-title">
+                          
+                            <h2><strong>Metabolomics</strong></h2>
+                            <hr>
+                            <div class="clearfix"></div>
+                        </div>
+                        <p class="intro">Metabolomics allows to identify, quantify and analyse various metabolites in different types of biological samples. <br><br>Quality, safety and authenticity of foods and beverages can be investigated with great precision with the detailed results molecular fingerprinting provides. <br><br> Using data from metabolomics analysis producers can improve organoleptic properties of their products such as aromas and flavours and increase their nutritional value with high-sensitivity methods and customised pipelines. <br><br>What is more a detection of minute changes in the composition of products ingredients can be traced using metabolomics analysis providing a precise tool for assessing their authenticity.<br><br></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+      
+    
+      
+      
+    <!-- Clients Section
+    ==========================================-->
+    <div id="tf-clients" class="text-center">
+        <div class="overlay">
+            <div class="container">
+
+                <div class="section-title center">
+                    <h2><strong>Molecular</strong> authentication of origin</h2>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>     
+
+    <!-- Contact Section
+    ==========================================-->
+    <div id="tf-contact" class="text-center">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <div class="section-title center">
+                        <h2>Feel free to <strong>contact us</strong></h2>
+                        <div class="line">
+                            <hr>
+                        </div>
+                        <div class="clearfix"></div>
+                        <h4><a href="mailto:info@lamarck.bio">info@lamarck.bio</a></h4>     
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
 
 
-    <!--    Start Back To Top    -->
-    <a href="#" class="btn_fancy" id="back_top">
-      <div class="solid_layer"></div>
-      <div class="border_layer"></div>
-      <div class="text_layer"><img src="img/top_arrow.png" alt="Back to top" title="" class="top_arrow"></div>
-    </a>
-    <!--    End Back To Top    -->
 
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.js"></script>
 
+    <script src="js/owl.carousel.js"></script>
 
-
-    <!--    Javascript Files    -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/touchSwipe.min.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
-    <script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript" src="js/foundation/foundation.topbar.js"></script>
-    <script type="text/javascript" src="js/carouFredSel.js"></script>
-    <script type="text/javascript" src="js/scrollTo.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
+    <!-- Javascripts
+    ================================================== -->
     <script type="text/javascript" src="js/main.js"></script>
 
   </body>

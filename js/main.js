@@ -1,65 +1,128 @@
-$(document).ready(function(){
-	
+// Hello.
+//
+// This is The Scripts used for ___________ Theme
+//
+//
 
-	/*  Foundation Init    */
-	$(document).foundation();
+function main() {
 
+(function () {
+   'use strict';
 
+   /* ==============================================
+  	Testimonial Slider
+  	=============================================== */ 
 
-	/*  carousel Init    */
-	$('#carousel').carouFredSel({
-	 	width : '670',
-	 	pagination  : ".pagination",
-	 	responsive : true,
-	 	scroll :{
-	 		fx : 'fade'
-	 	},
-	 	items :{
-	 		visible : 1,
-	 		width : '670'
-	 	},
-		swipe: {
-			onMouse: true,
-			onTouch: true
-		}
+  	$('a.page-scroll').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 40
+            }, 900);
+            return false;
+          }
+        }
+      });
+
+    /*====================================
+    Show Menu on Book
+    ======================================*/
+    $(window).bind('scroll', function() {
+        var navHeight = $(window).height() - 100;
+        if ($(window).scrollTop() > navHeight) {
+            $('.navbar-default').addClass('on');
+        } else {
+            $('.navbar-default').removeClass('on');
+        }
+    });
+
+    $('body').scrollspy({ 
+        target: '.navbar-default',
+        offset: 80
+    })
+
+  	$(document).ready(function() {
+  	  $("#team").owlCarousel({
+  	 
+  	      navigation : false, // Show next and prev buttons
+  	      slideSpeed : 300,
+  	      paginationSpeed : 400,
+  	      autoHeight : true,
+  	      itemsCustom : [
+				        [0, 1],
+				        [450, 2],
+				        [600, 2],
+				        [700, 2],
+				        [1000, 4],
+				        [1200, 4],
+				        [1400, 4],
+				        [1600, 4]
+				      ],
+  	  });
+
+  	  $("#clients").owlCarousel({
+  	 
+  	      navigation : false, // Show next and prev buttons
+  	      slideSpeed : 300,
+  	      paginationSpeed : 400,
+  	      autoHeight : true,
+  	      itemsCustom : [
+				        [0, 1],
+				        [450, 2],
+				        [600, 2],
+				        [700, 2],
+				        [1000, 4],
+				        [1200, 5],
+				        [1400, 5],
+				        [1600, 5]
+				      ],
+  	  });
+
+      $("#testimonial").owlCarousel({
+        navigation : false, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+        });
+
+  	});
+
+  	/*====================================
+    Portfolio Isotope Filter
+    ======================================*/
+    $(window).load(function() {
+        var $container = $('#lightbox');
+        $container.isotope({
+            filter: '*',
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        $('.cat a').click(function() {
+            $('.cat .active').removeClass('active');
+            $(this).addClass('active');
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                }
+            });
+            return false;
+        });
+
     });
 
 
 
+}());
 
 
-	/*    Mean navigation menu scroll to    */
-    $('#mean_nav ul li a').click(function(e){
-    	e.preventDefault();
-    	scrollTo($(this).attr('href'), 900, 'easeInOutCubic');
-    });
-
-
-
-
-
-
-    /*    Back to top button    */
-    var back_top = $('#back_top');
-
-    back_top.click(function(e){
-    	e.preventDefault();
-    	scrollTo(0, 900, 'easeInOutCubic');
-    	
-    });
-
-    function scrollTo(target, speed, ease){
-    	$(window).scrollTo(target, speed, {easing:ease});
-    }
-
-    $(window).on('scroll', function(){    
-	    if($(this).scrollTop()>749)
-	    {
-	    	back_top.stop().animate({opacity : 1}, 250);
-	    }else
-	    {
-	    	back_top.stop().animate({opacity : 0}, 250);	    
-	    }   
-    });
-
-});
+}
+main();
